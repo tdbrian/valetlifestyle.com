@@ -1,0 +1,18 @@
+extends layout
+
+block nav
+
+    .buyerPortal
+        | Buyer Portal
+    
+    .navLinks
+        a(href='/logout')
+            .iphoneAppNav.nav Logout
+
+block content
+
+    script.
+        var rsToken = !{JSON.stringify(rsToken)}
+        var users = !{JSON.stringify(users)}
+
+    div(ui-view)

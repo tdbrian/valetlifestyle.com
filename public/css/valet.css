@@ -1,0 +1,357 @@
+
+/* Main Element Properties */
+
+body {
+	background-image:url('../images/gradientBackground.jpg');
+	background-color:#b0b1b5;
+	background-repeat:no-repeat;
+	background-position:center 0px;
+	font-family: "Open Sans", sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+a:link {color:#242424;}      /* unvisited link */
+a:visited {color:#242424;}  /* visited link */
+a:hover {color:#6f0007;}  /* mouse over link */
+a:active {color:#6f0007;}  /* selected link */
+
+ul {
+	padding: 0;
+}
+
+/* Header */
+
+.header {
+  background-image: -moz-linear-gradient( 90deg, rgb(239,239,239) 0%, rgb(255,255,255) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(239,239,239) 0%, rgb(255,255,255) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(239,239,239) 0%, rgb(255,255,255) 100%);
+  position: fixed;
+  width: 100%;
+  height: 62px;
+  z-index: 83;
+}
+
+.headerLogo {
+	position: absolute;
+	top: 0;
+	left: 25px;
+	background-image:url('../images/headerLogo.png');
+	width: 126px;
+	height: 60px;
+}
+
+.navLinks {
+	position: absolute;
+	right: 45px;
+	top: 0;
+	height: 60px;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 300;
+	color: #242424;
+}
+
+.buyerPortal {
+	position: absolute;
+	top: 13px;
+	font-size: 31px;
+	font-weight: 300;
+	left: 150px;
+	text-transform: uppercase;
+	color: #ADADAD;
+}
+
+.nav {
+	display: inline-block;
+	padding-top: 20px;
+	margin-left: 23px;
+}
+
+.nav:hover {
+	color: #6f0007;
+	cursor: pointer;
+}
+
+/* Index */
+
+.centerRedStripe {
+  background-image: url("../images/centerRed.png");
+  position: absolute;
+  top: 209px;
+  width: 100%;
+  height: 345px;
+  z-index: 1;
+}
+
+.centerContainer {
+	position: relative;
+	display: block;
+	width: 1000px;
+	height: 680px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.iphoneImage {
+  	position: absolute;
+	background-image: url("../images/iphonMockup.png");
+	width: 617px;
+	height: 734px;
+  	top: 0px;
+  	left: -80px;
+  	z-index: 2;
+}
+
+.bodyTxt {
+  	position: absolute;
+	background-image: url("../images/bodytxt.png");
+	width: 690px;
+	height: 405px;
+  	top: 112px;
+  	right: 0px;
+  	z-index: 2;
+}
+
+.bubbleAbout {
+  	position: absolute;
+	background-image: url("../images/bubbleAbout.png");
+	width: 255px;
+	height: 185px;
+  	top: 528px;
+  	right: 312px;
+  	z-index: 2;
+}
+
+.appStore {
+  	position: absolute;
+	background-image: url("../images/appStore.png");
+	width: 122px;
+	height: 42px;
+  	top: 185px;
+  	left: 315px;
+  	z-index: 2;
+}
+
+.footerNote {
+	position: fixed;
+	background-image: url("../images/footerNote.png");
+	width: 329px;
+	height: 188px;
+  	bottom: 10px;
+  	right: 20px;
+  	z-index: 12;
+}
+
+/* Login */
+
+.loginBackground {
+  position: absolute;
+  background-color: #b0b1b4;
+  left: 0px;
+  top: 0;
+  right: 0px;
+  bottom: 35px;
+}
+
+.loginWrapper {
+    position: absolute;
+    left: 50%;
+    z-index: 90;
+}
+
+.loginContainer {
+  position: relative;
+  top: 150px;
+  left: -50%;
+  padding-bottom: 40px;
+  width: 500px;
+  background-image: -moz-linear-gradient( 90deg, rgb(239,239,239) 0%, rgb(255,255,255) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(239,239,239) 0%, rgb(255,255,255) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(239,239,239) 0%, rgb(255,255,255) 100%);
+}
+
+.loginTitle {
+  text-transform: uppercase;
+  padding-left: 20px;
+  padding-top: 10px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.usernameContainer {
+  margin-top: 25px;
+  margin-left: 90px;
+}
+
+.passwordContainer {
+  margin-top: 10px;
+  margin-left: 90px;
+}
+
+.loginInput {
+  border: solid 1px lightgrey;
+  height: 30px;
+  width: 325px;
+}
+
+.loginButton {
+  border: solid 1px lightgrey;
+  background-color: white;
+  font-size: 17px;
+  padding: 6px 12px 6px 12px;
+  cursor: pointer;
+  color: black;
+  margin-left: 347px;
+  margin-top: 10px;
+}
+
+.loginButton:hover {
+  background-color: lightgrey;
+}
+
+.loginFailed {
+  display: none;
+  margin-left: 90px;
+  background-color: #EEC5C5;
+  margin-left: 90px;
+  margin-right: 80px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  border: solid 1px #E69191;
+  color: #830000;
+}
+
+/* Dashboard */
+
+.navBar {
+  background: #DB000F; /* Old browsers */
+  background: -moz-linear-gradient(top,  #DB000F 0%, #6d0007 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DB000F), color-stop(100%,#6d0007)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #DB000F 0%,#6d0007 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #DB000F 0%,#6d0007 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #DB000F 0%,#6d0007 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #DB000F 0%,#6d0007 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DB000F', endColorstr='#6d0007',GradientType=0 ); /* IE6-9 */
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 60px;
+  width: 100%;
+  height: 57px;
+  z-index: 57;
+}
+
+.navItem {
+	display: inline-block;
+	margin-top: -46px;
+	vertical-align: middle;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 20px;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.navItem:hover {
+	color: #ebebeb;
+}
+
+.firstNav {
+	margin-left: 50px;
+}
+
+.navDivider {
+	display: inline-block;
+	background-image: url("../images/navDivider.png");
+	height: 57px;
+	width: 2px;
+}
+
+.leftToolbar {
+  position: relative;
+  background-color: rgb( 112, 112, 112 );
+  position: absolute;
+  left: 0px;
+  top: 117px;
+  bottom: 35px;
+  width: 234px;
+  z-index: 45;
+}
+
+.toolbarTitle {
+	color: white;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-left: 19px;
+	margin-top: 20px;
+}
+
+.toolbarUnderline {
+	border-top: solid 1px white;
+	margin-top: 4px;
+	margin-left: 19px;
+	width: 215px;
+	height: 12px;
+}
+
+.sidebarLi {
+	list-style:none;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 3px;
+	font-size: 15px;
+}
+
+.sidebarLi:hover {
+	background-color: #575757;
+}
+
+.sidebarLinks {
+	color: white !important;
+	text-decoration: none;
+}
+
+.sideBarName {
+	color: #d1d1d1;
+	text-transform: uppercase;
+}
+
+.sidebarUserName {
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.centerContent {
+  position: absolute;
+  background-color: #b0b1b4;
+  left: 235px;
+  top: 117px;
+  right: 0px;
+  bottom: 35px;
+  z-index: 50;
+}
+
+/* Footer */
+
+.footer {
+  background-color: rgb( 255, 255, 255 );
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 35px;
+  z-index: 4;
+}
+
+.footerCopyright {
+	position: absolute;
+	top: 10px;
+	left: 25px;
+	font-size: 12px;
+	color: #4c4c4c;
+}

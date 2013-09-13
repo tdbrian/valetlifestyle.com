@@ -1,0 +1,27 @@
+extends layout
+
+block nav
+    
+    .navLinks
+        a(href='/')
+            .iphoneAppNav.nav Iphone App
+
+block content
+
+    .loginBackground
+        .loginWrapper
+            .loginContainer
+                form#loginForm
+                    .loginTitle Buyer Login
+                    .usernameContainer
+                        .title Email
+                        input(type='text' name='email').loginInput
+                    .passwordContainer
+                        .title Password
+                        input(type='password' name='password').loginInput
+
+                    .loginFailed Sorry, the email you entered does not exist in Valet Lifestyle.
+
+                    button(type='submit').loginButton Login
+
+    .centerContent
