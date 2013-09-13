@@ -1,13 +1,13 @@
 
 <div class="leftToolbar">
-    <div class="toolbarTitle">Available Jobs</div>
+    <div class="toolbarTitle">Accepted Jobs</div>
     <div class="toolbarUnderline">
         <ul>
-            <li class="sidebarLi" ng-repeat="(availEventsKey, availEvent) in availableEvents" ng-click="openAvailJob($index, availEvent)" ng-class="{sidebarLiActive: $index==selectedIndex}">
+            <li class="sidebarLi" ng-repeat="(acceptedEventsKey, acceptedEvent) in accpetedEvents" ng-click="openAcceptedJob($index, acceptedEvent)" ng-class="{sidebarLiActive: $index==selectedIndex}">
                 <a class="sidebarLinks">
                     <div class="sideBarNavItem">
-                        <div class="sidebarUserName">{{availEvent.clientName}}</div>
-                        <div class="sideBarName">${{availEvent.allowedBudget}} <span>{{availEvent.title}}</span></div>
+                        <div class="sidebarUserName">{{acceptedEvent.clientName}}</div>
+                        <div class="sideBarName">${{acceptedEvent.allowedBudget}} <span>{{acceptedEvent.title}}</span></div>
                     </div>
                 </a>
             </li>
@@ -41,8 +41,24 @@
                 <span class="smDetailValue">{{currentEvent.description}}</span>
             </div>
         </div>
-        <div class="actionButtons">
+        <!-- <div class="actionButtons">
             <button class="actionButton" ng-click="acceptJob()">Accept Job</button>
+        </div> -->
+        
+        <div class="acceptedBin">
+            <div class="binTitle">Wardrobe Builder</div>
+            <div class="searchBar">
+                <span class="searchLabel">Keyword</span>
+                <input class="searchInput" placeholder="High Socks" ng-model="keyword"></input>   
+                <span class="searchLabel">Designers</span>
+                <input class="searchInput" placeholder="Happy Socks" ng-model="designer"></input> 
+            </div>
+                <div class="queryContainer">
+                <span class="searchLabel">Price Min: ${{minPrice}} \ Range Max: ${{maxPrice}} </span>
+                <div class="priceRange"></div>  
+            </div>
+            <button class="searchButton">Go</button>
         </div>
+
     </div>
 </div>

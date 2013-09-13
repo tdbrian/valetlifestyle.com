@@ -6,13 +6,28 @@ block nav
         | Buyer Portal
     
     .navLinks
+        .iphoneAppNav.nav.nolink Welcome #{buyer.firstName}
         a(href='/logout')
             .iphoneAppNav.nav Logout
 
 block content
 
     script.
-        var rsToken = !{JSON.stringify(rsToken)}
-        var users = !{JSON.stringify(users)}
+        var buyer = !{JSON.stringify(buyer)}
+
+    .navBar
+        .navDivider.firstNav
+        a(href='/dashboard#/available' class="noUnderline") 
+            .navItem Available Jobs
+        .navDivider
+        a(href='/dashboard#/accepted' class="noUnderline") 
+            .navItem Accepted
+        .navDivider
+        a(href='/dashboard#/pending' class="noUnderline") 
+            .navItem Pending
+        .navDivider
+        a(href='/dashboard#/shipped' class="noUnderline") 
+            .navItem Shipped
+        .navDivider
 
     div(ui-view)

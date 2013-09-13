@@ -112,23 +112,17 @@ app.put("/validateLogin", function(req, res) {
 });
 
 app.get("/dashboard", function(req, res) {
-  var users;
   if (buyer === null) {
     return res.redirect('/');
   } else {
     if (buyer.token === void 0) {
-      console.log('no token');
       buyer.token = token;
       buyersCollection.save(buyer, function(err, savedBuyer) {
         return console.log(savedBuyer);
       });
     }
-    console.log(buyer);
-    users = {
-      firstName: 'Thomas'
-    };
     return res.render("dashboard", {
-      users: users,
+      buyer: buyer,
       rsToken: token
     });
   }

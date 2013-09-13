@@ -120,32 +120,28 @@ app.get "/dashboard", (req, res) ->
 
     # If user does not have token, save
     if buyer.token is undefined
-      console.log 'no token'
       buyer.token = token
       buyersCollection.save buyer, (err, savedBuyer) ->
         console.log savedBuyer
 
-    console.log buyer
-
-    # Prep data variables for front-end
-    users =
-      firstName: 'Thomas'
-
     # Render dashboard with data
     res.render "dashboard", 
-      users: users
+      buyer: buyer
       rsToken: token
 
 # Dashboard
 app.get "/logout", (req, res) ->
 
+  # Reset all user variables
   token = ""
   buyer = null
   buyersCollection = null
 
+  # Close DB connection
   if db?
     db.close()
   
+  # After logout, redirect to home
   res.redirect '/'
 
 app.listen 3000
