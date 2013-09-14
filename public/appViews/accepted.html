@@ -16,31 +16,20 @@
 </div>
 
 <div class="centerContent">
-    <div class="detailsContainer">
-        <div class="leftDetails">
-            <div class="detailsJob detailsBlock">
-                <div class="smDetailTitles">Job</div>
-                <span class="lrgDetailValue">#0045</span>
-            </div>
-            <div class="detailsTitle detailsBlock">
-                <div class="smDetailTitles">Event</div>
-                <span class="medDetailValue">{{currentEvent.title}}</span>
-            </div>
-            <div class="detailsBudget detailsBlock">
-                <div class="smDetailTitles">Budget</div>
-                <span class="medDetailValue">${{currentEvent.allowedBudget}}.00</span>
-            </div>
+    
+        <div class="topAcceptedDetails">
+                <div class="topDetailsTitle">Job</div>
+                <span class="topDetialsValue">#0045</span>
+                <div class="topDetailsTitle">Event</div>
+                <span class="topDetialsValue">{{currentEvent.title}}</span>
+                <div class="topDetailsTitle">Budget</div>
+                <span class="topDetialsValue">${{currentEvent.allowedBudget}}.00</span>
+                <div class="topDetailsTitle">Client</div>
+                <span class="topDetialsValue">#0045</span>
+                <div class="topDetailsTitle">Description</div>
+                <span class="topDetialsValue">{{currentEvent.description}}</span>
         </div>
-        <div class="rightDetails">
-            <div class="detailsJob detailsBlock">
-                <div class="smDetailTitles smDeltailWide">Client</div>
-                <span class="lrgDetailValue">#0045</span>
-            </div>
-            <div class="detailsTitle detailsBlock">
-                <div class="smDetailTitles smDeltailWide">Description</div>
-                <span class="smDetailValue">{{currentEvent.description}}</span>
-            </div>
-        </div>
+        
         <!-- <div class="actionButtons">
             <button class="actionButton" ng-click="acceptJob()">Accept Job</button>
         </div> -->
@@ -57,8 +46,63 @@
                 <span class="searchLabel">Price Min: ${{minPrice}} \ Range Max: ${{maxPrice}} </span>
                 <div class="priceRange"></div>  
             </div>
-            <button class="searchButton">Go</button>
+            <button class="searchButton" ng-click="runQuery()">Go</button>
+        
+            <div class="waredrobe">
+                <div class="wardrobeBoxTitle">Event Wardrobe</div>
+                <br>
+                <div class="wardrobeDollars">Price: <b>${{totalWardrobe}}</b></div>
+                <div class="wardrobeDollars">Commission: <b>${{totalCommission}}</b></div>
+
+                <p>
+                  <button ng-class="saveStatus" style="margin-left:15px;" type="button" class="btn btn-default btn-xs" ng-click="saveWardrobe()">Save Wardrobe</button>
+                  <button ng-class="approvalStatus" type="button" class="btn btn-xs" ng-click="submitForApproval()">Submit for Approval</button>
+                </p>
+
+                <div class="shopItem" ng-repeat="(wardrobeKey, wardrobeItem) in wardrobe" ng-click="showDetail(wardrobeItem, true)">
+                    <div class="wardrobeItemPrice">${{wardrobeItem.price}}</div>
+                    <img class="wardrobeImage" ng-src="{{wardrobeItem.product_image}}" alt="${{wardrobeItem.price}}">
+                </div>
+            </div>
+
+            <div class="shippingWall">
+                <div class="wardrobeBoxTitle">Shopping Selection</div>
+                <div class="moveGroup" ng-click="previousSelection()">Previous Selection</div>
+                <div class="moveGroup" ng-click="nextSelection()">Next Selection</div>
+                <div class="spinnerWrapper" ng-show="showSpinner">
+                    <div id="spinner"></div>
+                </div>
+                <br>
+                <div class="shopItem" ng-repeat="(shopKey, shopItem) in selection" ng-click="showDetail(shopItem, false)">
+                    <div class="shoppingItemPrice">${{shopItem.price}}</div>
+                    <img class="shoppingImage" ng-src="{{shopItem.product_image}}" alt="${{shopItem.price}}">
+                </div>
+
+            </div>
+
         </div>
 
-    </div>
 </div>
+
+<!-- Modal -->
+  <div class="modal fade" id="shoppingItemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">{{currentShopItem.product_name}} <span class="shoppingItemBy">BY {{currentShopItem.designer}}</span></h4>
+        </div>
+        <div class="modal-body">
+          <img style="max-width:420px;" ng-src="{{currentShopItem.product_image}}">
+          <h2>Price: ${{currentShopItem.price}}</h2>
+          <h3>Commission: ${{currentShopItem.commission}}</h3>
+          <h5>SKU: {{currentShopItem.sku}} Advertiser: {{currentShopItem.advertiser}}</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" ng-click="addToWardrobe()">Add to Wardrobe</button>
+          <button type="button" class="btn btn-danger" ng-click="removeFromWardrobe()" ng-show="showRemove">Remove</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->

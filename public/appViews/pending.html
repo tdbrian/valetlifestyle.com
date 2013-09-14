@@ -1,13 +1,13 @@
 
 <div class="leftToolbar">
-    <div class="toolbarTitle">Available Jobs</div>
+    <div class="toolbarTitle">Pending Jobs</div>
     <div class="toolbarUnderline">
         <ul>
-            <li class="sidebarLi" ng-repeat="(availEventsKey, availEvent) in availableEvents" ng-click="openAvailJob($index, availEvent)" ng-class="{sidebarLiActive: $index==selectedIndex}">
+            <li class="sidebarLi" ng-repeat="(pendingEventsKey, pendingEvent) in pendingEvents" ng-click="openPendingJob($index, pendingEvent)" ng-class="{sidebarLiActive: $index==selectedIndex}">
                 <a class="sidebarLinks">
                     <div class="sideBarNavItem">
-                        <div class="sidebarUserName">{{availEvent.clientName}}</div>
-                        <div class="sideBarName">${{availEvent.allowedBudget}} <span>{{availEvent.title}}</span></div>
+                        <div class="sidebarUserName">{{pendingEvent.clientName}}</div>
+                        <div class="sideBarName">${{pendingEvent.allowedBudget}} <span>{{pendingEvent.title}}</span></div>
                     </div>
                 </a>
             </li>
@@ -16,12 +16,12 @@
 </div>
 
 <div class="centerContent">
-    <div class="noItems" ng-hide="showEventDetails">No Jobs Currently Available</div>
-    <div class="detailsContainer" ng-show="showEventDetails">
+    <div class="detailsContainer">
+        <div class="alert alert-warning">{{pendingNote}}</div>
         <div class="leftDetails">
             <div class="detailsJob detailsBlock">
-                <div class="smDetailTitles">Formality</div>
-                <span class="medDetailValue">{{currentEvent.formality}}</span>
+                <div class="smDetailTitles">Job</div>
+                <span class="lrgDetailValue">#0045</span>
             </div>
             <div class="detailsTitle detailsBlock">
                 <div class="smDetailTitles">Event</div>
@@ -35,7 +35,7 @@
         <div class="rightDetails">
             <div class="detailsJob detailsBlock">
                 <div class="smDetailTitles smDeltailWide">Client</div>
-                <span class="medDetailValue">{{currentEvent.clientName}}</span>
+                <span class="lrgDetailValue">#0045</span>
             </div>
             <div class="detailsTitle detailsBlock">
                 <div class="smDetailTitles smDeltailWide">Description</div>

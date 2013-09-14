@@ -16,6 +16,11 @@ a:visited {color:#242424;}  /* visited link */
 a:hover {color:#6f0007;}  /* mouse over link */
 a:active {color:#6f0007;}  /* selected link */
 
+a:hover, a:focus {
+  color: #2A6496;
+  text-decoration: none;
+}
+
 ul {
 	padding: 0;
 }
@@ -361,7 +366,7 @@ ul {
 .detailsContainer {
   position: relative;
   width: 85%;
-  height: 180px;
+  height: 190px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 25px;
@@ -388,7 +393,7 @@ ul {
 
   .medDetailValue {
     color: black;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 300;
   }
 
@@ -445,11 +450,38 @@ ul {
 
 /* Accepted */
 
+.detailsAcceptedContainer {
+  height: 44px;
+}
+
+.topAcceptedDetails {
+  position: relative;
+  width: 85%;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  border-bottom: solid 1px white;
+}
+
+.topDetailsTitle {
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.topDetialsValue {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
 .acceptedBin {
   position: absolute;
-  top: 220px;
+  top: 97px;
   width: 100%;
-  height: 300px;
+  bottom: 0px;
   background-color: white;
 }
 
@@ -509,6 +541,124 @@ ul {
         background-color: lightgrey;
       }
 
+.waredrobe {
+  position: relative;
+  float: left;
+  margin-left: 50px;
+  margin-top: 24px;
+  width: 30%;
+  background-color: lightgrey;
+}
+
+.shippingWall {
+  position: relative;
+  float: right;
+  margin-right: 50px;
+  margin-top: 24px;
+  width: 57%;
+  background-color: lightgrey;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+  .wardrobeBoxTitle {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-bottom: 0px;
+  }
+
+.shopItem {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.shoppingImage {
+  max-width: 120px;
+  max-height: 120px;
+  padding: 4px;
+}
+
+.wardrobeImage {
+  max-width: 170px;
+  max-height: 200px;
+  padding: 8px;
+}
+
+.shoppingItemPrice {
+  position: absolute;
+  bottom: 4px;
+  height: 16px;
+  background-color: #FFF;
+  opacity: .85;
+  left: 3px;
+  right: 3px;
+  color: #000;
+  font-size: 11px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.wardrobeItemPrice {
+  position: absolute;
+  bottom: 8px;
+  height: 16px;
+  background-color: #FFF;
+  opacity: .85;
+  left: 8px;
+  right: 8px;
+  color: #000;
+  font-size: 11px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.shoppingItemBy {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.moveGroup {
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.moveGroup:hover {
+  color: grey;
+}
+
+.spinnerWrapper {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.wardrobeDollars{
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.noItems {
+  font-size: 30px;
+  color: white;
+  margin: 50px;
+}
+
 /* Footer */
 
 .footer {
@@ -527,4 +677,42 @@ ul {
 	font-size: 12px;
 	color: #4c4c4c;
   z-index: 301
+}
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
 }
