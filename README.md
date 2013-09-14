@@ -3,8 +3,8 @@
 A web application created as an assignment for rS. This app was written in two days as a hackathon assignment - futher considerations must be considered before this app could be used in a production environment.
 
 Demo Videos:
-http://youtu.be/Oa43LLfhFmM
-http://www.youtube.com/watch?v=8CRfmKP1DjI
+* http://youtu.be/Oa43LLfhFmM
+* http://www.youtube.com/watch?v=8CRfmKP1DjI
 
 For development speed I utilized the following tools:
 
