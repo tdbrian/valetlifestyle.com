@@ -137,9 +137,9 @@ app.get("/logout", function(req, res) {
   return res.redirect('/');
 });
 
-app.listen(3000);
+app.listen(8856);
 
-console.log("Express server started on port 3000");
+console.log("Express server started on port 8856");
 
 /*
 //@ sourceMappingURL=valet.js.map

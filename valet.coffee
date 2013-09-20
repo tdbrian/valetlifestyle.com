@@ -143,6 +143,6 @@ app.get "/logout", (req, res) ->
   # After logout, redirect to home
   res.redirect '/'
 
-app.listen 3000
-console.log "Express server started on port 3000"
+app.listen 8856
+console.log "Express server started on port 8856"
 
