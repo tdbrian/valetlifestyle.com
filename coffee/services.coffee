@@ -107,7 +107,7 @@ valetModels.service "RS", ($http, DB_URL) ->
 		console.log link
 		$.ajax(
 		  url: link
-		  dataType: "json"
+		  dataType: "jsonp"
 		  beforeSend: (xhr) ->
 		    xhr.overrideMimeType "text/plain; charset=x-user-defined"
 		).done (data) ->

@@ -334,7 +334,7 @@ valetModels.service("RS", function($http, DB_URL) {
     console.log(link);
     return $.ajax({
       url: link,
-      dataType: "json",
+      dataType: "jsonp",
       beforeSend: function(xhr) {
         return xhr.overrideMimeType("text/plain; charset=x-user-defined");
       }

@@ -1,0 +1,1824 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"loc",
+				"location	\\$location"
+			],
+			[
+				"availab",
+				"availableSeleted"
+			],
+			[
+				"lo",
+				"log	log"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"cla",
+				"class	Attr"
+			],
+			[
+				"avail",
+				"availableEvents"
+			],
+			[
+				"selec",
+				"selectedIndex"
+			],
+			[
+				"pendin",
+				"pendingEvent"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"styl",
+				"style	Attr"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"marin",
+				"margin-top"
+			],
+			[
+				"cl",
+				"class	Attr"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"bot",
+				"border-top"
+			],
+			[
+				"availa",
+				"availableEvents"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"root",
+				"rootScope	\\$rootScope"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"manual",
+				"manualResponse"
+			],
+			[
+				"sch",
+				"scheduleActive"
+			],
+			[
+				"_source",
+				"_sourceID"
+			],
+			[
+				"extract",
+				"extractEmail"
+			],
+			[
+				"if",
+				"ifel	If Else"
+			],
+			[
+				"insert",
+				"insertRaw"
+			],
+			[
+				"_sour",
+				"_sourceID"
+			],
+			[
+				"current",
+				"currentDataArray"
+			],
+			[
+				"id",
+				"_idField"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"tmpmonth",
+				"tmpMonthlyData"
+			],
+			[
+				"a",
+				"array	$… = array (…)"
+			],
+			[
+				"auth",
+				"authResponse"
+			],
+			[
+				"_user",
+				"_userID"
+			],
+			[
+				"globa",
+				"globalDebug"
+			],
+			[
+				"_coll",
+				"_collectionName"
+			],
+			[
+				"METER",
+				"meters"
+			],
+			[
+				"pr",
+				"providers"
+			],
+			[
+				"porta",
+				"portalDPCron"
+			],
+			[
+				"port",
+				"portalDPCron"
+			],
+			[
+				"data",
+				"dataProvider"
+			],
+			[
+				"cron",
+				"cronsDH"
+			],
+			[
+				"array_s",
+				"array_sum"
+			],
+			[
+				"resul",
+				"resultItem"
+			],
+			[
+				"week",
+				"weeklyPortalDB"
+			],
+			[
+				"weekly",
+				"weeklyMb"
+			],
+			[
+				"weekl",
+				"weeklyData"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"newus",
+				"newUserData"
+			],
+			[
+				"company",
+				"companyAbbrev"
+			],
+			[
+				"compan",
+				"companyAbbrev"
+			],
+			[
+				"client",
+				"clientOf"
+			],
+			[
+				"clien",
+				"clientOf"
+			],
+			[
+				"curren",
+				"currentDate"
+			],
+			[
+				"forma",
+				"formattedDate"
+			],
+			[
+				"allcron",
+				"allCronsPastLate"
+			],
+			[
+				"histo",
+				"historyItem"
+			],
+			[
+				"hist",
+				"historyItem"
+			],
+			[
+				"backgr",
+				"background-repeat"
+			],
+			[
+				"background",
+				"background-position"
+			],
+			[
+				"_us",
+				"_userID"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"summ",
+				"summary_logo"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"summary_genera",
+				"summary_general_info"
+			],
+			[
+				"curr",
+				"currentValue"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"exists",
+				"array_key_exists"
+			],
+			[
+				"process",
+				"processedArray"
+			],
+			[
+				"item",
+				"itemsArray"
+			],
+			[
+				"doc",
+				"doc_f	Function"
+			],
+			[
+				"edit",
+				"editedUser"
+			],
+			[
+				"query",
+				"queryArray"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"csvFil",
+				"csvFile"
+			],
+			[
+				"csv",
+				"csv"
+			],
+			[
+				"csvFile",
+				"csvFileSTring"
+			],
+			[
+				"unse",
+				"unset"
+			],
+			[
+				"point",
+				"pointname"
+			],
+			[
+				"is",
+				"is_array"
+			],
+			[
+				"currn",
+				"currentHour"
+			],
+			[
+				"nearby",
+				"nearbyZips"
+			],
+			[
+				"zipc",
+				"zipcodes"
+			],
+			[
+				"final",
+				"finalWeatherData"
+			],
+			[
+				"uns",
+				"unset"
+			],
+			[
+				"rul",
+				"rule"
+			],
+			[
+				"new",
+				"newIssue"
+			],
+			[
+				"edi",
+				"editedRule"
+			],
+			[
+				"up",
+				"updateCriteria"
+			],
+			[
+				"tr",
+				"try	Wrap in try { … } catch (…) { … }"
+			],
+			[
+				"h",
+				"h1	Tag"
+			],
+			[
+				"switch",
+				"switch	switch …"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"true",
+				"true"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"click",
+				"ng-click	angular click"
+			],
+			[
+				"Total",
+				"TotalMiscDemand"
+			],
+			[
+				"G",
+				"GasMeter"
+			],
+			[
+				"Power",
+				"PowerMeter5_PhotVoltaic_Demand"
+			],
+			[
+				"Pow",
+				"PowerMeter4_Lighting_Demand"
+			],
+			[
+				"Kw",
+				"KW_per_TON"
+			],
+			[
+				"Make",
+				"MakeupTowerWater"
+			],
+			[
+				"Main",
+				"MainWaterMeter"
+			],
+			[
+				"PowerM",
+				"PowerMeter1_Plant_Demand"
+			],
+			[
+				"Space",
+				"Spaces"
+			],
+			[
+				"portfol",
+				"portfolioName"
+			],
+			[
+				"dryb",
+				"drybulbGraph"
+			],
+			[
+				"unoc",
+				"unoccGraph"
+			],
+			[
+				"runnin",
+				"runningAve"
+			],
+			[
+				"bakc",
+				"background-image"
+			],
+			[
+				"uti",
+				"utilData"
+			],
+			[
+				"keycat",
+				"keyCategoryAxisSettings"
+			],
+			[
+				"clas",
+				"class	ngClass"
+			],
+			[
+				"km",
+				"kmMetersArray"
+			],
+			[
+				"system",
+				"systemName"
+			],
+			[
+				"key",
+				"key_groups"
+			],
+			[
+				"f",
+				"fori	Range Comprehension (inclusive)"
+			],
+			[
+				"enddate",
+				"endDateString"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"Util",
+				"UtilityData"
+			],
+			[
+				"PT",
+				"pt-sans"
+			],
+			[
+				"fonts",
+				"font-size"
+			],
+			[
+				"margin-",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "coffee/app.coffee",
+			"settings":
+			{
+				"buffer_size": 8295,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "valet.coffee",
+			"settings":
+			{
+				"buffer_size": 3673,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "valet.js",
+			"settings":
+			{
+				"buffer_size": 3441,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/appViews/pending.html",
+			"settings":
+			{
+				"buffer_size": 1828,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "coffee/services.coffee",
+			"settings":
+			{
+				"buffer_size": 3750,
+				"line_ending": "Unix",
+				"name": "services.coffee"
+			}
+		},
+		{
+			"file": "public/css/valet.css",
+			"settings":
+			{
+				"buffer_size": 12439,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/appViews/accepted.html",
+			"settings":
+			{
+				"buffer_size": 5264,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Nodejs/Nodejs.sublime-build",
+	"command_palette":
+	{
+		"height": 247.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"req",
+				"Snippet: require"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packages",
+				"Preferences: Browse Packages"
+			],
+			[
+				"require",
+				"Snippet: require"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"coff",
+				"Coffee: Run Script"
+			],
+			[
+				"json",
+				"Pretty JSON: Reformat (Pretty Print) JSON"
+			],
+			[
+				"gist",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"book",
+				"Bookmarks: Toggle"
+			],
+			[
+				"",
+				"Bookmarks: Select Previous"
+			],
+			[
+				"	reindent",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"title",
+				"Convert Case: Title Case"
+			],
+			[
+				"tit",
+				"Convert Case: Title Case"
+			],
+			[
+				"a",
+				"About"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"isntal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/valet.coffee",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/views/index.jade",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/views/dashboard.jade",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/appViews/available.html",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/appViews/shipped.html",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/appViews/pending.html",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/views/layout.jade",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/libs/moment.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/appViews/accepted.html",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/libs/spin.min.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/libs/ui-bootstrap.min.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/libs/jquery.isotope.min.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/libs/jquery.capty.min.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/login.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/views/login.jade",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/libs/ui-utils.min.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/libs/ui-utils.min",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/libs/underscore.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/app.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/app.coffee",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/Gruntfile.coffee",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/js/libs/ui-router.min.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/public/valet.css",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/node_modules/simple-oauth2/lib/client/access-token.js",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/package.json",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/valetlifestyle.com.html",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/node_modules/views/index.jade",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/valetlifestyle.com.coffee",
+		"/Users/thomasbrian/git-repositories/valetlifestyle.com/node_modules/views/layout.jade",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/node_modules/grunt-contrib-sass/tasks/sass.js",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/internalpPlusServer.coffee",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/.gitignore",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/public/views/utility.profile.html",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/public/views/utility.historical.html",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/devpPlusServer.coffee",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/pPlusServer.js",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/pPlusServer.coffee",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/.gitnore",
+		"/Users/thomasbrian/git-repositories/performanceplus.co/package.json",
+		"/Users/thomasbrian/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/thomasbrian/git-repositories/admin.performanceplus.co/codekit-config.json",
+		"/Users/thomasbrian/git-repositories/admin.performanceplus.co/config.rb",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/node-threads-a-gogo/binding.gyp",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/node-threads-a-gogo/package.json",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/PerformancePlusEngine.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/test.coffee",
+		"/Users/thomasbrian/Desktop/test.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/tester.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/modules/Collection/CollectionSpec.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/modules/Collection/Collection.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/modules/Collection/helpers/EmailExtractSpec.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/modules/Collection/helpers/EmailExtract.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/models/RawData.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/models/Provider.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/modules/Parse/helpers/TraneParseSpec.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/modules/Parse/helpers/TraneParse.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/README.md",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/modules/Parse/helpers/Siemens.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/modules/Parse/helpers/SiemensSpec.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/modules/Collection/helpers/EmailExtact.coffee",
+		"/Users/thomasbrian/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/thomasbrian/Library/Application Support/Sublime Text 2/Packages/Require Node.js Modules Helper/Default (OSX).sublime-keymap",
+		"/Users/thomasbrian/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/spec/modules/Collection/CollectionSpec.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/helpers/EmailExtact.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/QueueRunner.coffee",
+		"/Users/thomasbrian/git-repositories/Performance-Plus-Engine/.gitignore",
+		"/Users/thomasbrian/Desktop/imapConnect.coffee",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/Trane.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIPerformanceController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/DataHelper.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/vos/MongoBase.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIProcessPortalController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/vos/EmailExtract.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/BESMongoRestServiceController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/models/BESMongoRest.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/config/packages/loic-sharma/profiler/config.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/ReportGeneratorController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIReportingController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/vos/APIUser.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIUsersController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/models/User.php",
+		"/Users/thomasbrian/Library/Caches/Cleanup At Startup/Transmit/5D38C660-1868-484F-A705-EAD6C1A5E3C6/quote.blade.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/views/reports/ogcxIssues.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/views/reports/quote.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIEmailMarketingInqueryController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/views/emails/auth/reminder.blade.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIEmailMarketingInquery.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/IntegratedTestsController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/DataAggregation.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIPortalsController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/EmailMarketingInquery.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/Analysis.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/Statistics.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/models/ProvidersManager.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/sftp-config.json",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIAuthController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIAnalysisController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/config/app.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/Siemens.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIWeatherController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/AutomatedController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/models/CronManager.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/ProcessData.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/meterCalc.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/GenerateRegressions.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/Migration.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/MakePredictions.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/composer.json",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/Portal.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/ProcessCache.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/CronLogger.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/ErrorLogger.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/vos/Portal.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/Portal",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/Portals.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/routes.php",
+		"/Users/thomasbrian/Desktop/accumulation.js",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/BESIntegratedTests.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/helpers/RegressionCalc.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/models/AnalysisManager.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/views/ogcxIssues.php",
+		"/Users/thomasbrian/Desktop/RegBins.txt",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIRulesController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIMetersController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIIssuesController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIProjectsController.php",
+		"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1/APIProjectController.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<project>",
+			"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app",
+			"<project>",
+			"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app",
+			"<project>",
+			"/Users/thomasbrian/git-repositories/Predictive-Analysis-Engine/app/controllers/api/v1",
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			":3000",
+			"3000",
+			"$location",
+			"openAcceptedJob",
+			"accepted",
+			"accpetedEvents",
+			"submitForApproval",
+			"\"attention",
+			"= \"attent",
+			"pending",
+			"'accepted'",
+			"availableSeleted",
+			"getting buyer",
+			"timeout",
+			"accepted",
+			"getPending",
+			"availableSeleted",
+			"setting inital",
+			"availableSeleted",
+			"timeout",
+			"status",
+			"status.acc",
+			"notification saved!",
+			"gotAvailable",
+			"runQuery",
+			"accpetedEvents[0]",
+			"hide",
+			"getAccepted",
+			"pending",
+			"accepted",
+			"available",
+			"status",
+			"buyers",
+			"getAvailable",
+			"accpetedEvents",
+			"Status",
+			"status",
+			"Status",
+			"status",
+			"Notification",
+			"event",
+			"openAcceptedJob",
+			"selectedIndex",
+			"accpetedEvents",
+			"avail",
+			"Avail",
+			"avail",
+			"availableEvents",
+			"accpeted",
+			"Shipped",
+			"Accepted",
+			"accepted",
+			"shipped",
+			"$scope.currentShopItem",
+			"wardrobe",
+			"inv",
+			"sl",
+			"shopItem",
+			"wardrobeDollars",
+			"4",
+			"shop",
+			"spinner",
+			"keywords",
+			"timeout",
+			"qr",
+			"go",
+			"availableEvents",
+			"token",
+			"80px",
+			"50px",
+			"smDeltailWide",
+			"medDetailValue",
+			"lrgDetailValue",
+			"smDetailTitles",
+			"detailsJob detailsBlock",
+			"$apply",
+			"span",
+			"\n                <span>Search Keyword</span>\n                <input></input>   ",
+			"leftToolbar",
+			"http://www.w3schools.com",
+			"avail",
+			"Avail",
+			"avail",
+			"Avail",
+			"avail",
+			"availableEvents",
+			"available",
+			"Available",
+			"available",
+			"Available",
+			"pending",
+			"Pending",
+			"accepted",
+			"Accepted",
+			"_availableEvents",
+			"event",
+			"loginButton",
+			"button",
+			";\n",
+			"lrgDetailValue",
+			"span",
+			"checkAvailable",
+			"test",
+			"availKey",
+			"result",
+			"allUsers",
+			"nav",
+			"db",
+			"redirect",
+			"buyers",
+			"buyer",
+			"username",
+			"user",
+			"users",
+			"bodypar",
+			"err",
+			"msg",
+			"form",
+			"data",
+			"firstNav",
+			"quote",
+			"login",
+			"b0000c",
+			"6d0007",
+			"b0000c",
+			"6d0007",
+			"\n                li.sidebarLi\n                    a(href='/item/11').sidebarLinks\n                        .test test",
+			"stdout"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"provider",
+			"PROVIDER",
+			"besplus",
+			"Static Pressure Setpoint",
+			"\"domestic water\"",
+			"chilled water",
+			"\"hot water\"",
+			"\"type\": \"electricity\",",
+			"PT Sans"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "coffee/app.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8295,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6709,
+								6709
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime-better-coffeescript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2799.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "valet.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3673,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3381,
+								3381
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/sublime-better-coffeescript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "valet.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1660.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/appViews/pending.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1828,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1809,
+								1809
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 165.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "coffee/services.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								576,
+								576
+							]
+						],
+						"settings":
+						{
+							"auto_name": "services.coffee",
+							"syntax": "Packages/sublime-better-coffeescript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 120.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/css/valet.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12439,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								533,
+								533
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/appViews/accepted.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1756,
+								1756
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CoffeeLintPanel":
+	{
+		"height": 85.0
+	},
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"project": "valetlifestyle.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"accep",
+				"public/appViews/accepted.html"
+			],
+			[
+				"ship",
+				"public/appViews/shipped.html"
+			],
+			[
+				"pend",
+				"public/appViews/pending.html"
+			],
+			[
+				"log",
+				"public/js/login.js"
+			],
+			[
+				"login",
+				"views/login.jade"
+			],
+			[
+				"dir",
+				"coffee/directives.coffee"
+			],
+			[
+				"app",
+				"sass/app.sass"
+			],
+			[
+				"sass",
+				"node_modules/grunt-contrib-sass/tasks/sass.js"
+			],
+			[
+				"utility",
+				"public/views/utility.profile.html"
+			],
+			[
+				"frame",
+				"public/views/framework.html"
+			],
+			[
+				"a",
+				"coffee/app.coffee"
+			],
+			[
+				"serv",
+				"coffee/services.coffee"
+			],
+			[
+				"proper",
+				"public/adminpplus/views/properties.html"
+			],
+			[
+				"proce",
+				"app/helpers/ProcessData.php"
+			],
+			[
+				"t",
+				"app/helpers/Trane.php"
+			],
+			[
+				"tra",
+				"app/helpers/Trane.php"
+			],
+			[
+				"email",
+				"app/vos/EmailExtract.php"
+			],
+			[
+				"prov",
+				"app/models/ProvidersManager.php"
+			],
+			[
+				"processpor",
+				"app/controllers/api/v1/APIProcessPortalController.php"
+			],
+			[
+				"mono",
+				"app/vos/MongoBase.php"
+			],
+			[
+				"mongo",
+				"app/vos/MongoBase.php"
+			],
+			[
+				"datahel",
+				"app/helpers/DataHelper.php"
+			],
+			[
+				"prof",
+				"app/config/packages/loic-sharma/profiler/config.php"
+			],
+			[
+				"mon",
+				"app/vos/MongoBase.php"
+			],
+			[
+				"mongob",
+				"app/vos/MongoBase.php"
+			],
+			[
+				"besmono",
+				"app/models/BESMongoRest.php"
+			],
+			[
+				"mongoret",
+				"app/controllers/BESMongoRestServiceController.php"
+			],
+			[
+				"user",
+				"app/vos/APIUser.php"
+			],
+			[
+				"apire",
+				"app/controllers/api/v1/APIReportingController.php"
+			],
+			[
+				"report",
+				"app/controllers/ReportGeneratorController.php"
+			],
+			[
+				"besmon",
+				"app/models/BESMongoRest.php"
+			],
+			[
+				"portalscon",
+				"app/controllers/api/v1/APIPortalsController.php"
+			],
+			[
+				"analy",
+				"app/helpers/Analysis.php"
+			],
+			[
+				"dataagg",
+				"app/helpers/DataAggregation.php"
+			],
+			[
+				"process",
+				"app/controllers/api/v1/APIProcessPortalController.php"
+			],
+			[
+				"inte",
+				"app/controllers/IntegratedTestsController.php"
+			],
+			[
+				"analyss",
+				"app/helpers/Analysis.php"
+			],
+			[
+				"stat",
+				"app/helpers/Statistics.php"
+			],
+			[
+				"analysis",
+				"app/helpers/Analysis.php"
+			],
+			[
+				"profiler",
+				"app/config/packages/loic-sharma/profiler/config.php"
+			],
+			[
+				"",
+				"app/controllers/api/v1/APIAuthController.php"
+			],
+			[
+				"siemen",
+				"app/helpers/Siemens.php"
+			],
+			[
+				"apiprocess",
+				"app/controllers/api/v1/APIProcessPortalController.php"
+			],
+			[
+				"apianalysiscontroller",
+				"app/controllers/api/v1/APIAnalysisController.php"
+			],
+			[
+				"weather",
+				"app/controllers/api/v1/APIWeatherController.php"
+			],
+			[
+				"apiproce",
+				"app/controllers/api/v1/APIProcessPortalController.php"
+			],
+			[
+				"config",
+				"app/config/packages/loic-sharma/profiler/config.php"
+			],
+			[
+				"apius",
+				"app/vos/APIUser.php"
+			],
+			[
+				"apiauthcontroller",
+				"app/controllers/api/v1/APIAuthController.php"
+			],
+			[
+				"con",
+				"app/config/packages/loic-sharma/profiler/config.php"
+			],
+			[
+				"confi",
+				"app/config/app.php"
+			],
+			[
+				"conf",
+				"app/config/packages/loic-sharma/profiler/config.php"
+			],
+			[
+				"auto",
+				"app/controllers/AutomatedController.php"
+			],
+			[
+				"cron",
+				"app/models/CronManager.php"
+			],
+			[
+				"apiperformancecontroller",
+				"app/controllers/api/v1/APIPerformanceController.php"
+			],
+			[
+				"besmongorestservicecontroller",
+				"app/controllers/BESMongoRestServiceController.php"
+			],
+			[
+				"bes",
+				"app/models/BESMongoRest.php"
+			],
+			[
+				"automa",
+				"app/controllers/AutomatedController.php"
+			],
+			[
+				"apiauth",
+				"app/controllers/api/v1/APIAuthController.php"
+			],
+			[
+				"aius",
+				"app/vos/APIUser.php"
+			],
+			[
+				"apiusers",
+				"app/controllers/api/v1/APIUsersController.php"
+			],
+			[
+				"portals",
+				"app/controllers/api/v1/APIPortalsController.php"
+			],
+			[
+				"rout",
+				"app/routes.php"
+			],
+			[
+				"cronman",
+				"app/models/CronManager.php"
+			],
+			[
+				"emaile",
+				"app/vos/EmailExtract.php"
+			],
+			[
+				"port",
+				"app/vos/Portal.php"
+			],
+			[
+				"migr",
+				"app/helpers/Migration.php"
+			],
+			[
+				"cronma",
+				"app/models/CronManager.php"
+			],
+			[
+				"portal",
+				"app/vos/Portal.php"
+			],
+			[
+				"an",
+				"app/helpers/Analysis.php"
+			],
+			[
+				"dtat",
+				"app/helpers/DataAggregation.php"
+			],
+			[
+				"apiuser",
+				"app/controllers/api/v1/APIUsersController.php"
+			],
+			[
+				"por",
+				"app/vos/Portal.php"
+			],
+			[
+				"regress",
+				"app/helpers/RegressionCalc.php"
+			],
+			[
+				"besmong",
+				"app/models/BESMongoRest.php"
+			],
+			[
+				"apirep",
+				"app/controllers/api/v1/APIReportingController.php"
+			],
+			[
+				"genera",
+				"app/controllers/ReportGeneratorController.php"
+			],
+			[
+				"apianaly",
+				"app/controllers/api/v1/APIAnalysisController.php"
+			],
+			[
+				"analys",
+				"app/helpers/Analysis.php"
+			],
+			[
+				"manag",
+				"app/models/AnalysisManager.php"
+			],
+			[
+				"integ",
+				"app/controllers/IntegratedTestsController.php"
+			],
+			[
+				"apiportalscon",
+				"app/controllers/api/v1/APIPortalsController.php"
+			],
+			[
+				"porta",
+				"app/vos/Portal.php"
+			],
+			[
+				"data",
+				"app/helpers/DataHelper.php"
+			],
+			[
+				"automat",
+				"app/controllers/AutomatedController.php"
+			],
+			[
+				"autom",
+				"app/controllers/AutomatedController.php"
+			],
+			[
+				"rul",
+				"app/helpers/Rules.php"
+			],
+			[
+				"ogcx",
+				"app/views/ogcxIssues.php"
+			],
+			[
+				"pot",
+				"app/vos/Portal.php"
+			],
+			[
+				"issues",
+				"app/controllers/api/v1/APIIssuesController.php"
+			],
+			[
+				"iss",
+				"app/helpers/Issues.php"
+			],
+			[
+				"routes",
+				"app/routes.php"
+			],
+			[
+				"siem",
+				"app/helpers/Siemens.php"
+			],
+			[
+				"emai",
+				"app/vos/EmailExtract.php"
+			],
+			[
+				"proces",
+				"app/helpers/ProcessData.php"
+			],
+			[
+				"tac",
+				"app/helpers/Tac.php"
+			],
+			[
+				"apiportal",
+				"app/controllers/api/v1/APIPortalController.php"
+			],
+			[
+				"besmongo",
+				"app/controllers/api/BESMongoRestService.php"
+			],
+			[
+				"issue",
+				"app/controllers/api/v1/APIIssuesController.php"
+			],
+			[
+				"mo",
+				"app/vos/MongoBase.php"
+			],
+			[
+				"meter",
+				"app/controllers/api/v1/APIMetersController.php"
+			],
+			[
+				"apiper",
+				"app/controllers/api/v1/APIPerformanceController.php"
+			],
+			[
+				"perform",
+				"app/controllers/api/v1/APIPerformanceController.php"
+			],
+			[
+				"siems",
+				"app/helpers/Siemens.php"
+			],
+			[
+				"processdat",
+				"app/helpers/ProcessData.php"
+			],
+			[
+				"extra",
+				"app/vos/EmailExtract.php"
+			],
+			[
+				"siemens",
+				"app/helpers/Siemens.php"
+			],
+			[
+				"apiemailfor",
+				"app/controllers/api/v1/APIEmailForwardingController.php"
+			],
+			[
+				"forw",
+				"app/controllers/api/v1/APIEmailForwardingController.php"
+			],
+			[
+				"erro",
+				"app/helpers/ErrorLogger.php"
+			],
+			[
+				"error",
+				"app/helpers/ErrorLogger.php"
+			],
+			[
+				"getwe",
+				"app/helpers/GetWeather.php"
+			],
+			[
+				"weatherman",
+				"app/models/WeatherManager.php"
+			],
+			[
+				"getwea",
+				"app/helpers/GetWeather.php"
+			],
+			[
+				"get",
+				"app/helpers/GetWeather.php"
+			],
+			[
+				"indte",
+				"app/controllers/IntegratedTestsController.php"
+			],
+			[
+				"processd",
+				"app/helpers/ProcessData.php"
+			],
+			[
+				"integra",
+				"app/controllers/IntegratedTestsController.php"
+			],
+			[
+				"apiissue",
+				"app/controllers/api/v1/APIIssuesController.php"
+			],
+			[
+				"read",
+				"readme.md"
+			],
+			[
+				"rules",
+				"app/controllers/api/v1/APIRulesController.php"
+			],
+			[
+				"sieme",
+				"app/helpers/Siemens.php"
+			],
+			[
+				"issu",
+				"app/helpers/Issues.php"
+			],
+			[
+				"cronlog",
+				"app/helpers/CronLogger.php"
+			],
+			[
+				"apirules",
+				"app/controllers/api/v1/APIRulesController.php"
+			],
+			[
+				"apirule",
+				"app/controllers/api/v1/APIRulesController.php"
+			],
+			[
+				"apiportals",
+				"app/controllers/api/v1/APIPortalsController.php"
+			],
+			[
+				"apiana",
+				"app/controllers/api/v1/APIAnalysisController.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 694.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"MenuBar"
+			]
+		],
+		"width": 392.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 185.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
