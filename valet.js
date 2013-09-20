@@ -49,7 +49,7 @@ buyersCollection = null;
 OAuth2 = require("simple-oauth2")(credentials);
 
 authorization_uri = OAuth2.AuthCode.authorizeURL({
-  redirect_uri: "http://localhost:3000/callback",
+  redirect_uri: "http://valetlifestyle.com/callback",
   scope: "favorites",
   state: ""
 });
