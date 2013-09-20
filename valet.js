@@ -122,8 +122,7 @@ app.get("/dashboard", function(req, res) {
       });
     }
     return res.render("dashboard", {
-      buyer: buyer,
-      rsToken: token
+      buyer: buyer
     });
   }
 });

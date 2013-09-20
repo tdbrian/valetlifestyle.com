@@ -25,6 +25,11 @@ ul {
 	padding: 0;
 }
 
+.sideBarNavItem {
+  padding: 4px;
+  line-height: 16px;
+}
+
 /* Header */
 
 .header {

@@ -42,28 +42,26 @@ app.constant 'DB_URL', 'http://api.valetlifestyle.com/v1/valet/'
 # Available
 # ////////////////////////////////
 
-AvailableCtrl = ($scope, $state, $location, $timeout, $rootScope, Events, Notification) ->
+AvailableCtrl = ($scope, $state, $location, $timeout, $rootScope, Buyer, Events, Notification) ->
 
+  Buyer.buyer = buyer
   $scope.buyer = buyer
   availableSeleted = false
 
   checkAvailable = ->
     Events.getAvailable (availableEvents) ->
-
-      console.log('gotAvailable');
-      console.log(availableEvents.length);
-      if availableEvents.length > 0
-        console.log('show')
+      
+      # If new events are available
+      if availableEvents.length > 0 and availableSeleted == false
+        console.log 'setting inital'
+        availableSeleted = true
         $scope.showEventDetails = true
-      else
-        console.log('hide')
-        $scope.showEventDetails = false
-
-      $scope.availableEvents = availableEvents
-      if not availableSeleted
+        $scope.availableEvents = availableEvents
         $scope.selectedIndex = 0
         $scope.currentEvent = availableEvents[0]
-      availableSeleted = true
+      else if availableEvents.length == 0
+        $scope.showEventDetails = false
+
       $timeout checkAvailable, 3000
 
   checkAvailable()
@@ -75,6 +73,7 @@ AvailableCtrl = ($scope, $state, $location, $timeout, $rootScope, Events, Notifi
 
   $scope.acceptJob = ->
     $scope.currentEvent.status = 'accepted'
+    $scope.currentEvent.buyer = buyer.bid
     Events.save $scope.currentEvent, () ->
       $location.path('/accepted')
       console.log 'back'
@@ -85,8 +84,11 @@ AvailableCtrl = ($scope, $state, $location, $timeout, $rootScope, Events, Notifi
 # Accepted
 # ////////////////////////////////
 
-AcceptedCtrl = ($scope, $state, $timeout, Events, RS, Notification) ->
+AcceptedCtrl = ($scope, $state, $timeout, $location, Events, RS, Buyer, Notification) ->
 
+  console.log 'in accepted'
+
+  Buyer.buyer = buyer
   $scope.buyer = buyer
   $scope.minPrice = 1
   $scope.maxPrice = 1000
@@ -111,14 +113,19 @@ AcceptedCtrl = ($scope, $state, $timeout, Events, RS, Notification) ->
       $scope.minPrice = ui.values[0]
       $scope.maxPrice = ui.values[1]
 
+  console.log 'get accepted'
   Events.getAccepted (accpetedEvents) ->
     $scope.accpetedEvents = accpetedEvents
-    $scope.currentEvent = accpetedEvents[0]
-    $scope.openAcceptedJob $scope.currentEvent, $scope.currentEvent
-    $scope.selectedIndex = 0
-    accpetedSeleted = true
+    if accpetedEvents
+      $scope.currentEvent = accpetedEvents[0]
+      $scope.openAcceptedJob $scope.currentEvent, $scope.currentEvent
+      $scope.selectedIndex = 0
+      accpetedSeleted = true
 
-    $scope.runQuery()
+      $scope.runQuery()
+
+    else
+      console.log 'no accepted jobs'
 
   $scope.openAcceptedJob = (key, availEvent) ->
     $scope.totalWardrobe = 0
@@ -136,6 +143,7 @@ AcceptedCtrl = ($scope, $state, $timeout, Events, RS, Notification) ->
 
   $scope.acceptJob = ->
     $scope.currentEvent.status = 'accepted'
+    $scope.currentEvent.buyer = buyer.bid
     Events.save $scope.currentEvent, () ->
       console.log 'back'
 
@@ -185,33 +193,40 @@ AcceptedCtrl = ($scope, $state, $timeout, Events, RS, Notification) ->
     $scope.currentEvent.itemList = $scope.wardrobe
     Events.save $scope.currentEvent, () ->
       $scope.approvalStatus = 'btn-success' 
+      Notification.newNotification $scope.currentEvent, 'submitted'
 
       # Reload accepted
-      Events.getAccepted (accpetedEvents) ->
-        $scope.accpetedEvents = accpetedEvents
-        $scope.currentEvent = accpetedEvents[0]
-        $scope.openAcceptedJob $scope.currentEvent, $scope.currentEvent
-        $scope.selectedIndex = 0
-        accpetedSeleted = true
+      Events.getAccepted (acceptedEvents) ->
+        if acceptedEvents?
+          $scope.acceptedEvents = acceptedEvents
+          if acceptedEvents.length > 0
+            $scope.currentEvent = acceptedEvents[0]
+            $scope.openAcceptedJob $scope.currentEvent, $scope.currentEvent
+            $scope.selectedIndex = 0
+            accpetedSeleted = true
+        else
+          $scope.acceptedEvents = []
+
+        $location.path('/pending')
         $scope.approvalStatus = 'btn-warning' 
         $scope.saveStatus = '' 
-
-        Notification.newNotification $scope.currentEvent, 'submitted'
 
 
 # ////////////////////////////////
 # Pending
 # ////////////////////////////////
 
-PendingCtrl = ($scope, $state, $timeout, Events, RS) ->
+PendingCtrl = ($scope, $state, $timeout, Buyer, Events, RS) ->
 
+  Buyer.buyer = buyer
+  
   Events.getPending (pendingEvents) ->
     console.log 'getting pending'
     $scope.pendingEvents = pendingEvents
-    $scope.currentEvent = pendingEvents[0]
-    $scope.selectedIndex = 0
-    $scope.openPendingJob $scope.selectedIndex, $scope.currentEvent
-    pendingSeleted = true
+    if pendingEvents.length > 0
+      $scope.currentEvent = pendingEvents[0]
+      $scope.selectedIndex = 0
+      $scope.openPendingJob $scope.selectedIndex, $scope.currentEvent
 
   $scope.openPendingJob = (pendingKey, pendingEvent) ->
     console.log 'in pending'
@@ -220,13 +235,14 @@ PendingCtrl = ($scope, $state, $timeout, Events, RS) ->
 
     if pendingEvent.status is 'pending'
       $scope.pendingNote = 'Waiting on client to approve.'
-    
 
 # ////////////////////////////////
 # Shipped
 # ////////////////////////////////
 
-ShippedCtrl = ($scope, $state, $timeout, Events, RS) ->
+ShippedCtrl = ($scope, $state, $timeout, Buyer, Events, RS) ->
+  
+  Buyer.buyer = buyer
   
   $scope.submitShipped = ->
     $scope.currentEvent.status = 'shipped'
@@ -249,39 +265,76 @@ ShippedCtrl = ($scope, $state, $timeout, Events, RS) ->
 # Data Models
 valetModels = angular.module("valetModels", [])
 
-valetModels.service "Events", ($http, DB_URL) ->
+valetModels.service "Buyer", ($http, DB_URL) ->
   
 	self = @
+	@buyer = {}
+
+valetModels.service "Events", ($http, DB_URL, Buyer) ->
+  
+	self = @
+	@all = {}
 	@available = {}
 	@accepted = {}
 	@pending = {}
 	@shipped = {}
 
 	@getAvailable = (cb) ->
-		link = DB_URL + 'group/valet/events/status/new'
-		$http.get(link).success (_availableEvents) ->
-		  self.available = _availableEvents
-		  cb _availableEvents
+		getEvents ->
+			$http.get(DB_URL + 'group/valet/events/status/new').success (_events) ->
+				self.available = _events
+				cb _events
 
 	@getAccepted = (cb) ->
-		link = DB_URL + 'group/valet/events/status/accepted'
-		$http.get(link).success (_acceptedEvents) ->
-		  self.accepted = _acceptedEvents
-		  cb _acceptedEvents
+		getEvents ->
+			group = _.groupBy self.all, 'status'
+			self.accepted = group.accepted
+			cb self.accepted
 
 	@getPending = (cb) ->
-		link = DB_URL + 'group/valet/events/status/pending'
-		$http.get(link).success (_pendingEvents) ->
-		  console.log 'got pending'
-		  console.log _pendingEvents
-		  self.pending = _pendingEvents
-		  cb _pendingEvents
+		getEvents ->
+			group = _.groupBy self.all, 'status'
+			self.pending = group.pending
+			cb self.pending
 
 	@getShipped = (cb) ->
-		link = DB_URL + 'group/valet/events/status/shipped'
-		$http.get(link).success (_shippedEvents) ->
-		  self.shipped = _shippedEvents
-		  cb _shippedEvents
+		getEvents ->
+			group = _.groupBy self.all, 'status'
+			self.shipped = group.shipped
+			cb self.shipped
+
+	getEvents = (cb) ->
+		# console.log 'getting buyer - ' + Buyer.buyer.bid
+		$http.get(DB_URL + 'group/valet/events/buyer/' + Buyer.buyer.bid).success (_events) ->
+			console.log _events
+			self.all = _events
+			cb()
+
+	# @getAvailable = (cb) ->
+	# 	link = DB_URL + 'group/valet/events/status/new'
+	# 	$http.get(link).success (_availableEvents) ->
+	# 	  self.available = _availableEvents
+	# 	  cb _availableEvents
+
+	# @getAccepted = (cb) ->
+	# 	link = DB_URL + 'group/valet/events/status/accepted'
+	# 	$http.get(link).success (_acceptedEvents) ->
+	# 	  self.accepted = _acceptedEvents
+	# 	  cb _acceptedEvents
+
+	# @getPending = (cb) ->
+	# 	link = DB_URL + 'group/valet/events/status/pending'
+	# 	$http.get(link).success (_pendingEvents) ->
+	# 	  console.log 'got pending'
+	# 	  console.log _pendingEvents
+	# 	  self.pending = _pendingEvents
+	# 	  cb _pendingEvents
+
+	# @getShipped = (cb) ->
+	# 	link = DB_URL + 'group/valet/events/status/shipped'
+	# 	$http.get(link).success (_shippedEvents) ->
+	# 	  self.shipped = _shippedEvents
+	# 	  cb _shippedEvents
 		
 	@save = (_event, cb) ->
 		delete _event._id
@@ -346,7 +399,7 @@ valetModels.service "Notification", ($http, DB_URL) ->
 			message: message
 			type: type
 			event: notifyEvent.eid
-			group: 'attention'
+			group: group
 			date: moment().format("YYYY-MM-DD")
 			time: moment().format("HH:mm:ss")
 			viewed: false
@@ -354,7 +407,6 @@ valetModels.service "Notification", ($http, DB_URL) ->
 
 		$http.post(DB_URL + 'valet/notifications', newNotification).success (result) ->
 			console.log 'notification saved!'
-			cb()
 
 
 

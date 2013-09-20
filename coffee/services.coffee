@@ -2,39 +2,76 @@
 # Data Models
 valetModels = angular.module("valetModels", [])
 
-valetModels.service "Events", ($http, DB_URL) ->
+valetModels.service "Buyer", ($http, DB_URL) ->
   
 	self = @
+	@buyer = {}
+
+valetModels.service "Events", ($http, DB_URL, Buyer) ->
+  
+	self = @
+	@all = {}
 	@available = {}
 	@accepted = {}
 	@pending = {}
 	@shipped = {}
 
 	@getAvailable = (cb) ->
-		link = DB_URL + 'group/valet/events/status/new'
-		$http.get(link).success (_availableEvents) ->
-		  self.available = _availableEvents
-		  cb _availableEvents
+		getEvents ->
+			$http.get(DB_URL + 'group/valet/events/status/new').success (_events) ->
+				self.available = _events
+				cb _events
 
 	@getAccepted = (cb) ->
-		link = DB_URL + 'group/valet/events/status/accepted'
-		$http.get(link).success (_acceptedEvents) ->
-		  self.accepted = _acceptedEvents
-		  cb _acceptedEvents
+		getEvents ->
+			group = _.groupBy self.all, 'status'
+			self.accepted = group.accepted
+			cb self.accepted
 
 	@getPending = (cb) ->
-		link = DB_URL + 'group/valet/events/status/pending'
-		$http.get(link).success (_pendingEvents) ->
-		  console.log 'got pending'
-		  console.log _pendingEvents
-		  self.pending = _pendingEvents
-		  cb _pendingEvents
+		getEvents ->
+			group = _.groupBy self.all, 'status'
+			self.pending = group.pending
+			cb self.pending
 
 	@getShipped = (cb) ->
-		link = DB_URL + 'group/valet/events/status/shipped'
-		$http.get(link).success (_shippedEvents) ->
-		  self.shipped = _shippedEvents
-		  cb _shippedEvents
+		getEvents ->
+			group = _.groupBy self.all, 'status'
+			self.shipped = group.shipped
+			cb self.shipped
+
+	getEvents = (cb) ->
+		# console.log 'getting buyer - ' + Buyer.buyer.bid
+		$http.get(DB_URL + 'group/valet/events/buyer/' + Buyer.buyer.bid).success (_events) ->
+			console.log _events
+			self.all = _events
+			cb()
+
+	# @getAvailable = (cb) ->
+	# 	link = DB_URL + 'group/valet/events/status/new'
+	# 	$http.get(link).success (_availableEvents) ->
+	# 	  self.available = _availableEvents
+	# 	  cb _availableEvents
+
+	# @getAccepted = (cb) ->
+	# 	link = DB_URL + 'group/valet/events/status/accepted'
+	# 	$http.get(link).success (_acceptedEvents) ->
+	# 	  self.accepted = _acceptedEvents
+	# 	  cb _acceptedEvents
+
+	# @getPending = (cb) ->
+	# 	link = DB_URL + 'group/valet/events/status/pending'
+	# 	$http.get(link).success (_pendingEvents) ->
+	# 	  console.log 'got pending'
+	# 	  console.log _pendingEvents
+	# 	  self.pending = _pendingEvents
+	# 	  cb _pendingEvents
+
+	# @getShipped = (cb) ->
+	# 	link = DB_URL + 'group/valet/events/status/shipped'
+	# 	$http.get(link).success (_shippedEvents) ->
+	# 	  self.shipped = _shippedEvents
+	# 	  cb _shippedEvents
 		
 	@save = (_event, cb) ->
 		delete _event._id
@@ -99,7 +136,7 @@ valetModels.service "Notification", ($http, DB_URL) ->
 			message: message
 			type: type
 			event: notifyEvent.eid
-			group: 'attention'
+			group: group
 			date: moment().format("YYYY-MM-DD")
 			time: moment().format("HH:mm:ss")
 			viewed: false
@@ -107,7 +144,6 @@ valetModels.service "Notification", ($http, DB_URL) ->
 
 		$http.post(DB_URL + 'valet/notifications', newNotification).success (result) ->
 			console.log 'notification saved!'
-			cb()
 
 
 

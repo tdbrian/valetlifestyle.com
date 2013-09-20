@@ -25,27 +25,23 @@ app = angular.module('valet', modules).config(function($stateProvider, $urlRoute
 
 app.constant('DB_URL', 'http://api.valetlifestyle.com/v1/valet/');
 
-AvailableCtrl = function($scope, $state, $location, $timeout, $rootScope, Events, Notification) {
+AvailableCtrl = function($scope, $state, $location, $timeout, $rootScope, Buyer, Events, Notification) {
   var availableSeleted, checkAvailable;
+  Buyer.buyer = buyer;
   $scope.buyer = buyer;
   availableSeleted = false;
   checkAvailable = function() {
     return Events.getAvailable(function(availableEvents) {
-      console.log('gotAvailable');
-      console.log(availableEvents.length);
-      if (availableEvents.length > 0) {
-        console.log('show');
+      if (availableEvents.length > 0 && availableSeleted === false) {
+        console.log('setting inital');
+        availableSeleted = true;
         $scope.showEventDetails = true;
-      } else {
-        console.log('hide');
-        $scope.showEventDetails = false;
-      }
-      $scope.availableEvents = availableEvents;
-      if (!availableSeleted) {
+        $scope.availableEvents = availableEvents;
         $scope.selectedIndex = 0;
         $scope.currentEvent = availableEvents[0];
+      } else if (availableEvents.length === 0) {
+        $scope.showEventDetails = false;
       }
-      availableSeleted = true;
       return $timeout(checkAvailable, 3000);
     });
   };
@@ -57,6 +53,7 @@ AvailableCtrl = function($scope, $state, $location, $timeout, $rootScope, Events
   };
   return $scope.acceptJob = function() {
     $scope.currentEvent.status = 'accepted';
+    $scope.currentEvent.buyer = buyer.bid;
     return Events.save($scope.currentEvent, function() {
       $location.path('/accepted');
       console.log('back');
@@ -65,8 +62,10 @@ AvailableCtrl = function($scope, $state, $location, $timeout, $rootScope, Events
   };
 };
 
-AcceptedCtrl = function($scope, $state, $timeout, Events, RS, Notification) {
+AcceptedCtrl = function($scope, $state, $timeout, $location, Events, RS, Buyer, Notification) {
   var spinner, target;
+  console.log('in accepted');
+  Buyer.buyer = buyer;
   $scope.buyer = buyer;
   $scope.minPrice = 1;
   $scope.maxPrice = 1000;
@@ -98,14 +97,19 @@ AcceptedCtrl = function($scope, $state, $timeout, Events, RS, Notification) {
       return $scope.maxPrice = ui.values[1];
     });
   });
+  console.log('get accepted');
   Events.getAccepted(function(accpetedEvents) {
     var accpetedSeleted;
     $scope.accpetedEvents = accpetedEvents;
-    $scope.currentEvent = accpetedEvents[0];
-    $scope.openAcceptedJob($scope.currentEvent, $scope.currentEvent);
-    $scope.selectedIndex = 0;
-    accpetedSeleted = true;
-    return $scope.runQuery();
+    if (accpetedEvents) {
+      $scope.currentEvent = accpetedEvents[0];
+      $scope.openAcceptedJob($scope.currentEvent, $scope.currentEvent);
+      $scope.selectedIndex = 0;
+      accpetedSeleted = true;
+      return $scope.runQuery();
+    } else {
+      return console.log('no accepted jobs');
+    }
   });
   $scope.openAcceptedJob = function(key, availEvent) {
     $scope.totalWardrobe = 0;
@@ -122,6 +126,7 @@ AcceptedCtrl = function($scope, $state, $timeout, Events, RS, Notification) {
   };
   $scope.acceptJob = function() {
     $scope.currentEvent.status = 'accepted';
+    $scope.currentEvent.buyer = buyer.bid;
     return Events.save($scope.currentEvent, function() {
       return console.log('back');
     });
@@ -178,30 +183,38 @@ AcceptedCtrl = function($scope, $state, $timeout, Events, RS, Notification) {
     $scope.currentEvent.itemList = $scope.wardrobe;
     return Events.save($scope.currentEvent, function() {
       $scope.approvalStatus = 'btn-success';
-      return Events.getAccepted(function(accpetedEvents) {
+      Notification.newNotification($scope.currentEvent, 'submitted');
+      return Events.getAccepted(function(acceptedEvents) {
         var accpetedSeleted;
-        $scope.accpetedEvents = accpetedEvents;
-        $scope.currentEvent = accpetedEvents[0];
-        $scope.openAcceptedJob($scope.currentEvent, $scope.currentEvent);
-        $scope.selectedIndex = 0;
-        accpetedSeleted = true;
+        if (acceptedEvents != null) {
+          $scope.acceptedEvents = acceptedEvents;
+          if (acceptedEvents.length > 0) {
+            $scope.currentEvent = acceptedEvents[0];
+            $scope.openAcceptedJob($scope.currentEvent, $scope.currentEvent);
+            $scope.selectedIndex = 0;
+            accpetedSeleted = true;
+          }
+        } else {
+          $scope.acceptedEvents = [];
+        }
+        $location.path('/pending');
         $scope.approvalStatus = 'btn-warning';
-        $scope.saveStatus = '';
-        return Notification.newNotification($scope.currentEvent, 'submitted');
+        return $scope.saveStatus = '';
       });
     });
   };
 };
 
-PendingCtrl = function($scope, $state, $timeout, Events, RS) {
+PendingCtrl = function($scope, $state, $timeout, Buyer, Events, RS) {
+  Buyer.buyer = buyer;
   Events.getPending(function(pendingEvents) {
-    var pendingSeleted;
     console.log('getting pending');
     $scope.pendingEvents = pendingEvents;
-    $scope.currentEvent = pendingEvents[0];
-    $scope.selectedIndex = 0;
-    $scope.openPendingJob($scope.selectedIndex, $scope.currentEvent);
-    return pendingSeleted = true;
+    if (pendingEvents.length > 0) {
+      $scope.currentEvent = pendingEvents[0];
+      $scope.selectedIndex = 0;
+      return $scope.openPendingJob($scope.selectedIndex, $scope.currentEvent);
+    }
   });
   return $scope.openPendingJob = function(pendingKey, pendingEvent) {
     console.log('in pending');
@@ -213,7 +226,8 @@ PendingCtrl = function($scope, $state, $timeout, Events, RS) {
   };
 };
 
-ShippedCtrl = function($scope, $state, $timeout, Events, RS) {
+ShippedCtrl = function($scope, $state, $timeout, Buyer, Events, RS) {
+  Buyer.buyer = buyer;
   return $scope.submitShipped = function() {
     $scope.currentEvent.status = 'shipped';
     return Events.save($scope.currentEvent, function() {
@@ -235,45 +249,57 @@ ShippedCtrl = function($scope, $state, $timeout, Events, RS) {
 
 valetModels = angular.module("valetModels", []);
 
-valetModels.service("Events", function($http, DB_URL) {
+valetModels.service("Buyer", function($http, DB_URL) {
   var self;
   self = this;
+  return this.buyer = {};
+});
+
+valetModels.service("Events", function($http, DB_URL, Buyer) {
+  var getEvents, self;
+  self = this;
+  this.all = {};
   this.available = {};
   this.accepted = {};
   this.pending = {};
   this.shipped = {};
   this.getAvailable = function(cb) {
-    var link;
-    link = DB_URL + 'group/valet/events/status/new';
-    return $http.get(link).success(function(_availableEvents) {
-      self.available = _availableEvents;
-      return cb(_availableEvents);
+    return getEvents(function() {
+      return $http.get(DB_URL + 'group/valet/events/status/new').success(function(_events) {
+        self.available = _events;
+        return cb(_events);
+      });
     });
   };
   this.getAccepted = function(cb) {
-    var link;
-    link = DB_URL + 'group/valet/events/status/accepted';
-    return $http.get(link).success(function(_acceptedEvents) {
-      self.accepted = _acceptedEvents;
-      return cb(_acceptedEvents);
+    return getEvents(function() {
+      var group;
+      group = _.groupBy(self.all, 'status');
+      self.accepted = group.accepted;
+      return cb(self.accepted);
     });
   };
   this.getPending = function(cb) {
-    var link;
-    link = DB_URL + 'group/valet/events/status/pending';
-    return $http.get(link).success(function(_pendingEvents) {
-      console.log('got pending');
-      console.log(_pendingEvents);
-      self.pending = _pendingEvents;
-      return cb(_pendingEvents);
+    return getEvents(function() {
+      var group;
+      group = _.groupBy(self.all, 'status');
+      self.pending = group.pending;
+      return cb(self.pending);
     });
   };
   this.getShipped = function(cb) {
-    var link;
-    link = DB_URL + 'group/valet/events/status/shipped';
-    return $http.get(link).success(function(_shippedEvents) {
-      self.shipped = _shippedEvents;
-      return cb(_shippedEvents);
+    return getEvents(function() {
+      var group;
+      group = _.groupBy(self.all, 'status');
+      self.shipped = group.shipped;
+      return cb(self.shipped);
+    });
+  };
+  getEvents = function(cb) {
+    return $http.get(DB_URL + 'group/valet/events/buyer/' + Buyer.buyer.bid).success(function(_events) {
+      console.log(_events);
+      self.all = _events;
+      return cb();
     });
   };
   return this.save = function(_event, cb) {
@@ -342,15 +368,14 @@ valetModels.service("Notification", function($http, DB_URL) {
       message: message,
       type: type,
       event: notifyEvent.eid,
-      group: 'attention',
+      group: group,
       date: moment().format("YYYY-MM-DD"),
       time: moment().format("HH:mm:ss"),
       viewed: false,
       deleted: false
     };
     return $http.post(DB_URL + 'valet/notifications', newNotification).success(function(result) {
-      console.log('notification saved!');
-      return cb();
+      return console.log('notification saved!');
     });
   };
 });

@@ -19,10 +19,6 @@
     <div class="detailsContainer">
         <div class="alert alert-warning">{{pendingNote}}</div>
         <div class="leftDetails">
-            <div class="detailsJob detailsBlock">
-                <div class="smDetailTitles">Job</div>
-                <span class="lrgDetailValue">#0045</span>
-            </div>
             <div class="detailsTitle detailsBlock">
                 <div class="smDetailTitles">Event</div>
                 <span class="medDetailValue">{{currentEvent.title}}</span>
@@ -35,15 +31,12 @@
         <div class="rightDetails">
             <div class="detailsJob detailsBlock">
                 <div class="smDetailTitles smDeltailWide">Client</div>
-                <span class="lrgDetailValue">#0045</span>
+                <span class="lrgDetailValue">{{currentEvent.clientName}}</span>
             </div>
             <div class="detailsTitle detailsBlock">
                 <div class="smDetailTitles smDeltailWide">Description</div>
                 <span class="smDetailValue">{{currentEvent.description}}</span>
             </div>
-        </div>
-        <div class="actionButtons">
-            <button class="actionButton" ng-click="acceptJob()">Accept Job</button>
         </div>
     </div>
 </div>

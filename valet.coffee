@@ -127,7 +127,6 @@ app.get "/dashboard", (req, res) ->
     # Render dashboard with data
     res.render "dashboard", 
       buyer: buyer
-      rsToken: token
 
 # Dashboard
 app.get "/logout", (req, res) ->

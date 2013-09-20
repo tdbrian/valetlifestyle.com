@@ -17,70 +17,72 @@
 
 <div class="centerContent">
     
-        <div class="topAcceptedDetails">
-                <div class="topDetailsTitle">Job</div>
-                <span class="topDetialsValue">#0045</span>
-                <div class="topDetailsTitle">Event</div>
-                <span class="topDetialsValue">{{currentEvent.title}}</span>
-                <div class="topDetailsTitle">Budget</div>
-                <span class="topDetialsValue">${{currentEvent.allowedBudget}}.00</span>
-                <div class="topDetailsTitle">Client</div>
-                <span class="topDetialsValue">#0045</span>
-                <div class="topDetailsTitle">Description</div>
-                <span class="topDetialsValue">{{currentEvent.description}}</span>
+    <div class="topAcceptedDetails">
+            <div class="topDetailsTitle">Client</div>
+            <span class="topDetialsValue">{{currentEvent.clientName}}</span>
+            <div class="topDetailsTitle">Event</div>
+            <span class="topDetialsValue">{{currentEvent.title}}</span>
+            <div class="topDetailsTitle">Budget</div>
+            <span class="topDetialsValue">${{currentEvent.allowedBudget}}.00</span>
+            <div class="topDetailsTitle">Description</div>
+            <span class="topDetialsValue">{{currentEvent.description}}</span>
+    </div>
+    
+    <!-- <div class="actionButtons">
+        <button class="actionButton" ng-click="acceptJob()">Accept Job</button>
+    </div> -->
+    
+    <div class="acceptedBin">
+        
+        <div class="binTitle">Wardrobe Builder</div>
+        
+        <div class="searchBar">
+            <span class="searchLabel">Keyword</span>
+            <input class="searchInput" placeholder="High Socks" ng-model="keyword"></input>   
+            <span class="searchLabel">Designers</span>
+            <input class="searchInput" placeholder="Happy Socks" ng-model="designer"></input> 
+        </div>
+
+        <div class="queryContainer">
+            <span class="searchLabel">Price Min: ${{minPrice}} \ Range Max: ${{maxPrice}} </span>
+            <div class="priceRange"></div>  
         </div>
         
-        <!-- <div class="actionButtons">
-            <button class="actionButton" ng-click="acceptJob()">Accept Job</button>
-        </div> -->
-        
-        <div class="acceptedBin">
-            <div class="binTitle">Wardrobe Builder</div>
-            <div class="searchBar">
-                <span class="searchLabel">Keyword</span>
-                <input class="searchInput" placeholder="High Socks" ng-model="keyword"></input>   
-                <span class="searchLabel">Designers</span>
-                <input class="searchInput" placeholder="Happy Socks" ng-model="designer"></input> 
+        <button class="searchButton" ng-click="runQuery()">Go</button>
+    
+        <div class="waredrobe">
+            <div class="wardrobeBoxTitle">Event Wardrobe</div>
+            <br>
+            <div class="wardrobeDollars">Price: <b>${{totalWardrobe}}</b></div>
+            <div class="wardrobeDollars">Commission: <b>${{totalCommission}}</b></div>
+
+            <p>
+              <button ng-class="saveStatus" style="margin-left:15px;" type="button" class="btn btn-default btn-xs" ng-click="saveWardrobe()">Save Wardrobe</button>
+              <button ng-class="approvalStatus" type="button" class="btn btn-xs" ng-click="submitForApproval()">Submit for Approval</button>
+            </p>
+
+            <div class="shopItem" ng-repeat="(wardrobeKey, wardrobeItem) in wardrobe" ng-click="showDetail(wardrobeItem, true)">
+                <div class="wardrobeItemPrice">${{wardrobeItem.price}}</div>
+                <img class="wardrobeImage" ng-src="{{wardrobeItem.product_image}}" alt="${{wardrobeItem.price}}">
             </div>
-                <div class="queryContainer">
-                <span class="searchLabel">Price Min: ${{minPrice}} \ Range Max: ${{maxPrice}} </span>
-                <div class="priceRange"></div>  
+        </div>
+
+        <div class="shippingWall">
+            <div class="wardrobeBoxTitle">Shopping Selection</div>
+            <div class="moveGroup" ng-click="previousSelection()">Previous Selection</div>
+            <div class="moveGroup" ng-click="nextSelection()">Next Selection</div>
+            <div class="spinnerWrapper" ng-show="showSpinner">
+                <div id="spinner"></div>
             </div>
-            <button class="searchButton" ng-click="runQuery()">Go</button>
-        
-            <div class="waredrobe">
-                <div class="wardrobeBoxTitle">Event Wardrobe</div>
-                <br>
-                <div class="wardrobeDollars">Price: <b>${{totalWardrobe}}</b></div>
-                <div class="wardrobeDollars">Commission: <b>${{totalCommission}}</b></div>
-
-                <p>
-                  <button ng-class="saveStatus" style="margin-left:15px;" type="button" class="btn btn-default btn-xs" ng-click="saveWardrobe()">Save Wardrobe</button>
-                  <button ng-class="approvalStatus" type="button" class="btn btn-xs" ng-click="submitForApproval()">Submit for Approval</button>
-                </p>
-
-                <div class="shopItem" ng-repeat="(wardrobeKey, wardrobeItem) in wardrobe" ng-click="showDetail(wardrobeItem, true)">
-                    <div class="wardrobeItemPrice">${{wardrobeItem.price}}</div>
-                    <img class="wardrobeImage" ng-src="{{wardrobeItem.product_image}}" alt="${{wardrobeItem.price}}">
-                </div>
-            </div>
-
-            <div class="shippingWall">
-                <div class="wardrobeBoxTitle">Shopping Selection</div>
-                <div class="moveGroup" ng-click="previousSelection()">Previous Selection</div>
-                <div class="moveGroup" ng-click="nextSelection()">Next Selection</div>
-                <div class="spinnerWrapper" ng-show="showSpinner">
-                    <div id="spinner"></div>
-                </div>
-                <br>
-                <div class="shopItem" ng-repeat="(shopKey, shopItem) in selection" ng-click="showDetail(shopItem, false)">
-                    <div class="shoppingItemPrice">${{shopItem.price}}</div>
-                    <img class="shoppingImage" ng-src="{{shopItem.product_image}}" alt="${{shopItem.price}}">
-                </div>
-
+            <br>
+            <div class="shopItem" ng-repeat="(shopKey, shopItem) in selection" ng-click="showDetail(shopItem, false)">
+                <div class="shoppingItemPrice">${{shopItem.price}}</div>
+                <img class="shoppingImage" ng-src="{{shopItem.product_image}}" alt="${{shopItem.price}}">
             </div>
 
         </div>
+
+    </div>
 
 </div>
 
